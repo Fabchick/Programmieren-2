@@ -9,7 +9,7 @@ using namespace std;
 void main()
 {
 	Aufzug A;
-
+	//haha
 	int obersterStock = 0;
 	char button = 'a';
 
