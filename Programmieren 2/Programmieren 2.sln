@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hase und Igel", "Hase und I
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pfad", "Pfad\Pfad.vcxproj", "{5860C646-0A04-4F45-B189-FB83724CFEF1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Boerse", "Boerse\Boerse.vcxproj", "{26C09F9B-FC77-432A-B4B5-D67F416180F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{5860C646-0A04-4F45-B189-FB83724CFEF1}.Release|x64.Build.0 = Release|x64
 		{5860C646-0A04-4F45-B189-FB83724CFEF1}.Release|x86.ActiveCfg = Release|Win32
 		{5860C646-0A04-4F45-B189-FB83724CFEF1}.Release|x86.Build.0 = Release|Win32
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Debug|x64.ActiveCfg = Debug|x64
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Debug|x64.Build.0 = Debug|x64
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Debug|x86.Build.0 = Debug|Win32
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Release|x64.ActiveCfg = Release|x64
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Release|x64.Build.0 = Release|x64
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Release|x86.ActiveCfg = Release|Win32
+		{26C09F9B-FC77-432A-B4B5-D67F416180F2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
