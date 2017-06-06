@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Aktie.cpp" />
+    <ClCompile Include="Boerse.cpp" />
+    <ClCompile Include="Kurs.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aktie.h" />
+    <ClInclude Include="Boerse.h" />
+    <ClInclude Include="Kurs.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{26C09F9B-FC77-432A-B4B5-D67F416180F2}</ProjectGuid>
     <RootNamespace>Boerse</RootNamespace>
@@ -109,9 +120,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
