@@ -10,7 +10,7 @@ Kurs::Kurs()
 void Kurs::simulate_kurs()
 {
 
-
+	999
 }
 
 
