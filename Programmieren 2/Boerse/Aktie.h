@@ -20,7 +20,7 @@ public:
 	Aktie(string name);
 	void Cout_aktie();
 	void Get_next_kurs();
-	bool Aktie::Get_bool();
+	bool Get_bool();
 	int Get_kurs();
 	string Get_name();
 	~Aktie();
