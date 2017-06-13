@@ -1,7 +1,9 @@
 #pragma once
 
-#include<time.h>
-#include<Windows.h>
+#include <ctime>
+
+#include <ctime>
+#include <random>
 
 class Kurs
 {
@@ -9,8 +11,8 @@ private:
 	int kurs = 0;
 public:
 	Kurs();
-	void simulate_kurs();
-	int get_kurs();
+	bool Simulate_kurs();
+	int Get_kurs();
 	~Kurs();
 };
 

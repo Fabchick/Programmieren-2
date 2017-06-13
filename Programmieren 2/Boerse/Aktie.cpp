@@ -1,57 +1,61 @@
 #include "Aktie.h"
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 Aktie::Aktie(string name)
 {
-	srand(time(NULL));
+	aktienName = name;
 
-	this->name = name;
-
-	ISIN[0] = '#';
-	ISIN[1] = '0';
-	ISIN[2] = 'A';
-	ISIN[3] = '.';
-	
 	for (int i = 4; i < 11; i++)
 	{
 		switch (rand() % 10)
 		{
-		case 0:ISIN[i] = '0'; break;
-		case 1:ISIN[i] = '1'; break;
-		case 2:ISIN[i] = '2'; break;
-		case 3:ISIN[i] = '3'; break;
-		case 4:ISIN[i] = '4'; break;
-		case 5:ISIN[i] = '5'; break;
-		case 6:ISIN[i] = '6'; break;
-		case 7:ISIN[i] = '7'; break;
-		case 8:ISIN[i] = '8'; break;
-		case 9:ISIN[i] = '9'; break;
+		case 0:temp = '0'; break;
+		case 1:temp = '1'; break;
+		case 2:temp = '2'; break;
+		case 3:temp = '3'; break;
+		case 4:temp = '4'; break;
+		case 5:temp = '5'; break;
+		case 6:temp = '6'; break;
+		case 7:temp = '7'; break;
+		case 8:temp = '8'; break;
+		case 9:temp = '9'; break;
 		}
+
+		ISIN.insert(i, temp);
 	}
 }
 
-void Aktie::cout_aktie()
+void Aktie::Cout_aktie()
 {
-	cout << name << " ISIN: ";
-	for (int i = 0; i < 11; i++)
-	{
-		cout << ISIN[i];
-	}
-	cout << " Kurs: " << K.get_kurs() << endl;
+	cout << "Name: " << setw(12) << aktienName;
+
+	cout << "      ISIN: " << ISIN;
+
+	cout << "      Kurs: " << KursP->Get_kurs() << endl;
 }
 
-int Aktie::get_next_kurs()
+void Aktie::Get_next_kurs()
 {
-	K.simulate_kurs();
-	return(K.get_kurs());
+	getBool = KursP->Simulate_kurs();
 }
 
-int Aktie::get_kurs()
+bool Aktie::Get_bool()
 {
-	return(K.get_kurs());
+	return(getBool);
+}
+
+int Aktie::Get_kurs()
+{
+	return(KursP->Get_kurs());
+}
+
+string Aktie::Get_name()
+{
+	return(aktienName);
 }
 
 Aktie::~Aktie()

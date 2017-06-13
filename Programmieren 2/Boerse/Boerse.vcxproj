@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="Aktie.cpp" />
     <ClCompile Include="Alarmmelder.cpp" />
+    <ClCompile Include="Beobachter.cpp" />
+    <ClCompile Include="Beobachterziel.cpp" />
     <ClCompile Include="Boerse.cpp" />
     <ClCompile Include="Kurs.cpp" />
     <ClCompile Include="main.cpp" />
@@ -29,6 +31,8 @@
   <ItemGroup>
     <ClInclude Include="Aktie.h" />
     <ClInclude Include="Alarmmelder.h" />
+    <ClInclude Include="Beobachter.h" />
+    <ClInclude Include="Beobachterziel.h" />
     <ClInclude Include="Boerse.h" />
     <ClInclude Include="Kurs.h" />
     <ClInclude Include="Ticker.h" />

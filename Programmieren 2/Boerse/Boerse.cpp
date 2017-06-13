@@ -9,22 +9,49 @@ Boerse::Boerse()
 {
 }
 
-void Boerse::add_aktie(Aktie a)
+void Boerse::Add_aktie(Aktie &aktie)
 {
-	this->a[anzAktien] = a;
-	anzAktien++;
+	if (anzAktien < MAX_AKTIEN)
+	{
+		aktienP[anzAktien] = &aktie;
+		aktienP[anzAktien]->Cout_aktie();
+		anzAktien++;
+	}
+	
+	Benachrichtige_alle();
 }
 
-
-void Boerse::cout_all_aktien()
+int Boerse::Get_anzahl_aktien()
 {
-	cout << "Alle aktuellen Aktien:" << endl;
+	return(anzAktien);
+}
+
+Aktie *Boerse::Get_aktie(int i)
+{
+	return(aktienP[i]);
+}
+
+void Boerse::Simulate()
+{
 	for (int i = 0; i < anzAktien; i++)
 	{
-		a[i].cout_aktie();
+		aktienP[i]->Get_next_kurs();
 	}
+	cout << endl;
+	Benachrichtige_alle();
 }
 
+/*void Boerse::Anmelden(Beobachter* beobachter)
+{
+}
+
+void Boerse::Abmelden(Beobachter* beobachter)
+{
+}
+
+void Boerse::Benachrichtige_alle()
+{
+}*/
 
 Boerse::~Boerse()
 {

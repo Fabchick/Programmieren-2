@@ -1,8 +1,8 @@
 #pragma once
 
-#include<string>
-#include<time.h>
-#include<Windows.h>
+#include <string>
+#include <ctime>
+#include <random>
 
 #include"Kurs.h"
 
@@ -11,15 +11,18 @@ using namespace std;
 class Aktie
 {
 private:
-	string name;
-	char ISIN[15];
-	Kurs K;
+	string temp;
+	string aktienName;
+	string ISIN = "#0A.";
+	Kurs *KursP = new Kurs;
+	bool getBool = 0;
 public:
-	Aktie();
 	Aktie(string name);
-	void cout_aktie();
-	int get_next_kurs();
-	int get_kurs();
+	void Cout_aktie();
+	void Get_next_kurs();
+	bool Aktie::Get_bool();
+	int Get_kurs();
+	string Get_name();
 	~Aktie();
 };
 

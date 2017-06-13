@@ -2,18 +2,22 @@
 
 Kurs::Kurs()
 {
-	srand(time(NULL));
-	kurs = (rand()%9000)+1001;	//kurd geht am anfang von 1001-10000
+	kurs = (rand()%9000)+1001;	//kurs geht am anfang von 1001-10000
 }
 
-void Kurs::simulate_kurs()
+bool Kurs::Simulate_kurs()
 {
-	kurs += rand() % 1000;	//maximal +1000 und minimal -1000
-	kurs -= rand() % 1000;
+	if (rand() % 5 != 0)		//jedes 5. mal ca. keine Änderung
+	{
+		kurs += rand() % 1000;	//maximal +1000 und minimal -1000
+		kurs -= rand() % 1000;
+		return(true);
+	}
+	return(false);
 }
 
 
-int Kurs::get_kurs()
+int Kurs::Get_kurs()
 {
 	return(kurs);
 }

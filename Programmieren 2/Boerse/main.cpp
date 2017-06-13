@@ -1,22 +1,40 @@
 #include <iostream>
-
+#include <ctime>
+#include <random>
+#include <Windows.h>
 using namespace std;
 
 #include"Boerse.h"
 #include"Aktie.h"
+#include"Alarmmelder.h"
+#include"Ticker.h"
 
 int main()
 {
-	Boerse B;
+	srand(time(0));
 
-	Aktie a("hallo");
-	Aktie b("welt");
+	cout << "Boersensimulator wird gestartet....." << endl << endl;
+
+	Boerse boerse;
+
+	boerse.Add_aktie(*new Aktie("Samsung"));
+	boerse.Add_aktie(*new Aktie("Apple"));
+	boerse.Add_aktie(*new Aktie("BMW"));
+	boerse.Add_aktie(*new Aktie("Audi"));
+	boerse.Add_aktie(*new Aktie("DeutscheBahn"));
 
 
-	B.add_aktie(a);
-	B.add_aktie(b);
-
-	B.cout_all_aktien();
+	Ticker ticker(&boerse);
+	Alarmmelder alarmmelder(&boerse);
 
 
+	int i = 0;
+	while (i < 10)
+	{
+		boerse.Simulate();
+		i++;
+		Sleep(1000);
+	}
+
+	system("PAUSE");
 }
